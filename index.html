@@ -9,7 +9,41 @@
 
     <script type="text/javascript">
 
-let mChoice = prompt('Hi!')
+//I need a prompt that lets the user decide on RPS
+
+/*prompt('what is the sum of 4-6 ?')
+
+function sum(mChoice,cpuSelect) {
+  let cpuSelect=3
+  if (mChoice === 2) {return "Correct!";}
+  else {return "wrong choice!";}
+}
+
+console.log(sum(mChoice,cpuSelect));*/
+let me = ["rock","paper","scissors"];
+let comp = ["rock","paper","scissors"];
+
+function sum(me,comp) {
+  if (me[0] == comp[0]) {
+    return "It's a tie!";
+  }
+else if (me[1] == comp[0]) {
+  return "You've won!";
+}
+
+  else return "You've lost!";
+
+}
+
+console.log(sum(me[1],comp[0]));
+
+//I need a formula for computer to randomly choose RPS
+
+//const selector = ['rock','paper','scissors'];
+//const cpuSelect = selector[Math.floor(Math.random() * selector.length)];
+
+//console.log(cpuSelect) <-- ^^ it works
+
 
 
     </script>
