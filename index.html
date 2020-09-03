@@ -20,22 +20,45 @@ function sum(mChoice,cpuSelect) {
 }
 
 console.log(sum(mChoice,cpuSelect));*/
-let me = ["rock","paper","scissors"];
-let comp = ["rock","paper","scissors"];
 
-function sum(me,comp) {
-  if (me[0] == comp[0]) {
-    return "It's a tie!";
+
+//////////////////////////////////////////////////////////////////////
+function computerPlay() { //This lets the computer decide on RPS
+  const selector = ['rock','paper','scissors'];
+  const cpuSelect = selector[Math.floor(Math.random() * selector.length)];
+  return cpuSelect;
+}
+
+const computerSelection = computerPlay(); //this assigns the random value to the const decided on
+//console.log(computerPlay());
+/////////^^^^^THIS IS THE RANDOM GENERATOR^^^^^^^^^^/////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+function playRound(playerSelection, computerSelection) { //compSelection here was to be the deciding random rps
+	if (playerSelection == 'rock') {
+    if (computerSelection == 'rock') {
+      return "it's a tie!";
+      }
+    }
+    else if (computerSelection == 'paper') {
+      return "You've lost!"
+    }
+    else {
+      return "You win!"
+    }
   }
-else if (me[1] == comp[0]) {
-  return "You've won!";
-}
 
-  else return "You've lost!";
 
-}
 
-console.log(sum(me[1],comp[0]));
+const playerSelection = 'rock'
+
+
+console.log(playRound(playerSelection, computerSelection));
+
+
+
+
 
 //I need a formula for computer to randomly choose RPS
 
