@@ -41,14 +41,13 @@ function playRound(playerSelection, computerSelection) { //compSelection here wa
       return "it's a tie!";
       }
     }
-    else if (computerSelection == 'paper') {
-      return "You've lost!"
-    }
-    else {
-      return "You win!"
-    }
+if (playerSelection == 'rock') {
+  if (computerSelection == 'paper') {
+    return "You've lost!";
   }
-
+}
+return "You won!";
+}
 
 
 const playerSelection = 'rock'
